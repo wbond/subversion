@@ -54,7 +54,7 @@ SVN_SQLITE_LIBS = @SVN_SQLITE_LIBS@
 SVN_XML_LIBS = @SVN_XML_LIBS@
 SVN_ZLIB_LIBS = @SVN_ZLIB_LIBS@
 
-LIBS = @LIBS@
+LIBS = @LIBS@ -lpsapi -lversion -lole32
 
 prefix = @prefix@
 exec_prefix = @exec_prefix@
@@ -175,7 +175,7 @@ CXXMAINTAINERFLAGS = @CXXMAINTAINERFLAGS@
 ### -Wmissing-declarations) are not valid for C++, and should be somehow
 ### suppressed (but they may come from httpd or APR).
 CPPFLAGS = @CPPFLAGS@ $(EXTRA_CPPFLAGS)
-LDFLAGS = @LDFLAGS@ $(EXTRA_LDFLAGS)
+LDFLAGS = @LDFLAGS@ $(EXTRA_LDFLAGS) -no-undefined
 SWIG_LDFLAGS = @SWIG_LDFLAGS@ $(EXTRA_SWIG_LDFLAGS)
 
 COMPILE = $(CC) $(CMODEFLAGS) $(CPPFLAGS) $(CMAINTAINERFLAGS) $(CFLAGS) $(INCLUDES)
