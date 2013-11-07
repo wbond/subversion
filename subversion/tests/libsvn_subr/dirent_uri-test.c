@@ -19,7 +19,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#ifdef _MSC_VER
+#ifdef __MSVCRT__
 #include <direct.h>
 #define getcwd _getcwd
 #define getdcwd _getdcwd
