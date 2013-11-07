@@ -1327,6 +1327,8 @@ case "$host" in
 esac
 AC_SUBST(INCLUDE_OUTPUTS)
 
+AC_DEFINE(SHGFP_TYPE_CURRENT, 0, [Fix cross-compile])
+
 # ==== Detection complete - output and run config.status =====================
 
 AC_CONFIG_HEADERS(subversion/svn_private_config.h.tmp:subversion/svn_private_config.h.in)
