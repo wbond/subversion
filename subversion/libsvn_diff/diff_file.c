@@ -1796,7 +1796,7 @@ output_unified_default_hdr(const char **header, const char *path,
 
   apr_strftime(time_buffer, &time_len, sizeof(time_buffer) - 1,
   /* Order of date components can be different in different languages */
-               _("%a %b %e %H:%M:%S %Y"), &exploded_time);
+               _("%w %m %e %H:%M:%S %Y"), &exploded_time);
 
   SVN_ERR(svn_utf_cstring_to_utf8(&utf8_timestr, time_buffer, pool));
 

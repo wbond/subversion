@@ -70,9 +70,9 @@ print_dirent(void *baton,
                  (external_parent_url && external_target));
 
   if (time_format_long == NULL)
-    time_format_long = _("%b %d %H:%M");
+    time_format_long = _("%m %d %H:%M");
   if (time_format_short == NULL)
-    time_format_short = _("%b %d  %Y");
+    time_format_short = _("%m %d  %Y");
 
   if (pb->ctx->cancel_func)
     SVN_ERR(pb->ctx->cancel_func(pb->ctx->cancel_baton));
