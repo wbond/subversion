@@ -90,12 +90,12 @@ print_dirent(void *baton,
           && apr_time_sec(dirent->time - now) < (365 * 86400 / 2))
         {
           apr_err = apr_strftime(timestr, &size, sizeof(timestr),
-                                 _("%b %d %H:%M"), &exp_time);
+                                 _("%m %d %H:%M"), &exp_time);
         }
       else
         {
           apr_err = apr_strftime(timestr, &size, sizeof(timestr),
-                                 _("%b %d  %Y"), &exp_time);
+                                 _("%m %d  %Y"), &exp_time);
         }
 
       /* if that failed, just zero out the string and print nothing */
