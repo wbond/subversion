@@ -57,7 +57,7 @@ test_platform_specific_auth_providers(const char **msg,
 #ifdef SVN_HAVE_KEYCHAIN_SERVICES
   number_of_providers += 2;
 #endif
-#if defined(WIN32) && !defined(__MINGW32__)
+#if defined(WIN32)
   number_of_providers += 2;
 #endif
   if (providers->nelts != number_of_providers)
@@ -98,7 +98,7 @@ test_platform_specific_auth_providers(const char **msg,
 #endif
 
   /* Test Windows auth providers */
-#if defined(WIN32) && !defined(__MINGW32__)
+#if defined(WIN32)
   svn_auth_get_platform_specific_provider(&provider, "windows",
                                           "simple", pool);
 
