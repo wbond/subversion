@@ -168,7 +168,15 @@ terminal_open(terminal_handle_t **terminal, svn_boolean_t noecho,
     {
       /* The process has a console. */
       CloseHandle(conin);
-      terminal_handle_init(*terminal, NULL, NULL, noecho, FALSE, NULL);
+
+      /* We opt to not use the console output here since that makes it
+         next to impossible to read from. */
+      apr_file_t *outfd;
+      status = apr_file_open_stderr(&outfd, pool);
+      if (status)
+        return svn_error_wrap_apr(status, _("Can't open stderr"));
+
+      terminal_handle_init(*terminal, NULL, outfd, noecho, FALSE, pool);
       return SVN_NO_ERROR;
     }
 #else  /* !WIN32 */
