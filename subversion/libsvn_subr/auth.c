@@ -461,7 +461,7 @@ svn_auth_get_platform_specific_provider
         }
 #endif
 
-#if defined(WIN32) && !defined(__MINGW32__)
+#if defined(WIN32)
       if (strcmp(provider_name, "windows") == 0 &&
           strcmp(provider_type, "simple") == 0)
         {
