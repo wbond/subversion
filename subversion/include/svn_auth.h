@@ -865,7 +865,7 @@ svn_auth_get_platform_specific_client_providers(
   svn_config_t *config,
   apr_pool_t *pool);
 
-#if (defined(WIN32) && !defined(__MINGW32__)) || defined(DOXYGEN)
+#if defined(WIN32) || defined(DOXYGEN)
 /**
  * Set @a *provider to an authentication provider of type @c
  * svn_auth_cred_simple_t that gets/sets information from the user's

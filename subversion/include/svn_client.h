@@ -152,7 +152,7 @@ svn_client_get_simple_provider(svn_auth_provider_object_t **provider,
                                apr_pool_t *pool);
 
 
-#if (defined(WIN32) && !defined(__MINGW32__)) || defined(DOXYGEN) || defined(CTYPESGEN) || defined(SWIG)
+#if defined(WIN32) || defined(DOXYGEN) || defined(CTYPESGEN) || defined(SWIG)
 /**
  * Create and return @a *provider, an authentication provider of type
  * #svn_auth_cred_simple_t that gets/sets information from the user's

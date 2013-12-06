@@ -54,7 +54,7 @@ SVN_SQLITE_LIBS = @SVN_SQLITE_LIBS@
 SVN_XML_LIBS = @SVN_XML_LIBS@
 SVN_ZLIB_LIBS = @SVN_ZLIB_LIBS@
 
-LIBS = @LIBS@ -lpsapi -lversion -lole32
+LIBS = @LIBS@ -lpsapi -lversion -lole32 -lcrypt32
 
 prefix = @prefix@
 exec_prefix = @exec_prefix@

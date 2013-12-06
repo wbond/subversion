@@ -26,7 +26,7 @@ typedef int win32_crypto__dummy;
 
 /* ==================================================================== */
 
-#if defined(WIN32) && !defined(__MINGW32__)
+#if defined(WIN32)
 
 /*** Includes. ***/
 
